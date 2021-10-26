@@ -9,7 +9,7 @@ class StartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/backgraound.png',),
             fit: BoxFit.cover
@@ -20,6 +20,7 @@ class StartScreen extends StatelessWidget {
             padding: const EdgeInsets.only(top: 300),
             child: Column(
               mainAxisSize: MainAxisSize.min,
+
               children: [
                 const Text(
                   'ReLocker',

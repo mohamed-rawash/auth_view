@@ -82,7 +82,7 @@ class _ControllerViewScreenState extends State<ControllerViewScreen> {
                       builder: (context) {
                         return Container(
                           child: Column(
-
+                            mainAxisSize: MainAxisSize.min,
                             children: [
                               const SizedBox(height: 10),
                               Container(
@@ -96,18 +96,24 @@ class _ControllerViewScreenState extends State<ControllerViewScreen> {
                                 height: 2,
                                 thickness: 2,
                               ),
-                              const ListTile(
-                                title: Text('My account'),
-                                leading: Icon(Icons.person),
+                              GestureDetector(
+                                child: const ListTile(
+                                  title: Text('My account'),
+                                  leading: Icon(Icons.person),
+                                ),
+                                onTap: (){},
                               ),
                               const Divider(
                                 color: Colors.grey,
                                 height: 2,
                                 thickness: 2,
                               ),
-                              const ListTile(
-                                title: Text('Technical support'),
-                                leading: Icon(Icons.person),
+                              GestureDetector(
+                                child: const ListTile(
+                                  title: Text('Technical support'),
+                                  leading: Icon(Icons.person),
+                                ),
+                                onTap: (){},
                               ),
                               const Divider(
                                 color: Colors.grey,
@@ -122,7 +128,7 @@ class _ControllerViewScreenState extends State<ControllerViewScreen> {
                                     child: const Text(
                                       'LOG OUT',
                                       style: TextStyle(
-                                        color: Colors.black87,
+                                        color: Colors.white,
                                         fontSize: 18,
                                       ),
                                     ),
@@ -134,12 +140,12 @@ class _ControllerViewScreenState extends State<ControllerViewScreen> {
                                         )),
                                     onPressed: () {}),
                               ),
-                              const SizedBox(height: 80),
+                              const SizedBox(height: 40),
                             ],
                           ),
                         );
                       },
-                      shape: RoundedRectangleBorder(
+                      shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.only(
                           topLeft: Radius.circular(25),
                           topRight: Radius.circular(25),
