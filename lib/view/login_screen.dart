@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/view/Controller_view_Screen.dart';
 import 'package:untitled/view/register_screen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -82,7 +83,9 @@ class LoginScreen extends StatelessWidget {
                             primary: Colors.grey.shade300,
                             shape: const StadiumBorder(),
                           ),
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ControllerViewScreen()));
+                          },
                         ),
                       ),
                       const SizedBox(height: 5),
